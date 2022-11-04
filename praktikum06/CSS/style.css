@@ -1,0 +1,49 @@
+
+        body {
+            background-color:whitesmoke;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        .center{
+            background-color: rgb(212, 168, 110);
+            padding: 1%;
+            
+        }
+        h1 {
+            color: blue;
+            text-align: center;
+            margin: 5px auto;
+            padding: 10px;
+           
+        }
+        .b {
+            text-align:center;
+            color: blue;
+            text-transform: capitalize;
+        }
+        
+        blockquote {
+            background-color: rgb(247, 220, 171);
+            text-align: center;
+            padding: auto;
+            width: fit-content;
+           
+        }
+        .ul{
+            text-align: center;
+        }
+        
+       
+        ul{
+            text-transform: capitalize;
+        }
+        img{
+            width: 20%;
+        }
+        p{
+            text-align: justify;
+        }
+    
+        .promo{
+            text-transform: capitalize;
+        }
+       
