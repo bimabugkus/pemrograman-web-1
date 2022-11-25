@@ -1,0 +1,40 @@
+* {
+    margin:0;
+    text-align: center;
+}
+header, footer {
+    background-color: yellow;
+    height: 15vh;
+    line-height: 15vh;
+    width: 80%;
+    margin-left: auto;
+    display: flex;
+    position: relative;
+}
+article {
+    background-color: aqua;
+    height: 70vh;
+    line-height: 70vh;
+    width: 50%;
+    flex:3;
+    order: 2;
+    position: absolute;
+    left: 20%;
+}
+aside {
+    background-color: pink;
+    width: 30%;
+    height: 70vh;
+    line-height: 70vh;
+    position: relative;
+    margin-left: auto;
+    flex: 1;
+    order: 3; 
+}
+.nav{
+background-color: yellowgreen;
+position: absolute;
+width: 20%;
+height: 100vh;
+line-height: 100vh;
+}
