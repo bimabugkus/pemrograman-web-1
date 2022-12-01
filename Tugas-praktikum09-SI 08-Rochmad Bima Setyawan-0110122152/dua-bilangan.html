@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jumlah Dua Bilangan</title>
+</head>
+<body>
+    <h1>Jumlah Dua Bilangan</h1>
+    <label for="in">    </label>
+    <input type="number" id="in">
+    <br>
+    <span id="+"></span>
+    <br>
+    <label for="in">    </label>
+    <input type="number" id="in">
+    <br>
+    <span id="="></span>
+    <br>
+    <label for="in">    </label>
+    <input type="number" id="in" onchange="hitung_bilangan()">
+    
+    <script>
+        document.getElementById("Bilangan").onchange = function() {hitung_bilangan()};
+        function hitung_bilangan(){
+            let t = "+" ;
+            let s = "=" ;
+            document.getElementById("+").innerHTML = t;
+            document.getElementById("=").innerHTML = s;
+
+            let = document.getElementById("in").velue;
+            let = document.getElementById("in").velue;
+            let tambah = Bilangan_1 + Bilangan_2
+
+            document.getElementById("tambah").innerHTML = tambah;
+           
+
+        }
+    </script>
+</body>
+</html>
