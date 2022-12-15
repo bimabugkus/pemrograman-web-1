@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <link rel="stylesheet" href="css/style5.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs.html">Nomor 2</a></li>
+                <li><a href="chat.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form-valid.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <table id="table">
+        <form action="submit">
+            <tr>
+                <td colspan="3">
+                    <h1 id="title">Pemesanan Tiket</h1>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Nama Pelanggan</p>
+                </td>
+                <td><input id="nama" type="text" placeholder="Masukan Nama" required minlength="1" maxlength="30"
+                        size="30">
+                </td>
+                <td>
+                    <p id="snama" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Email</p>
+                </td>
+                <td><input id="email" type="email" placeholder="Masukan Email" required size="30"></td>
+                <td>
+                    <p id="semail" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Jam Keberangkatan</p>
+                </td>
+                <td><input id="jam" type="time" required></td>
+                <td>
+                    <p id="sjam" style="color: red;"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <p>Tujuan Keberangkatan</p>
+                </td>
+                <td><input id="tujuan" type="text" placeholder="Masukan Tujuan Keberangkatan" required size="30"></td>
+                <td>
+                    <p id="stujuan" style="color: red;"></p>
+                </td>
+            </tr>
+            
+            <tr>
+                <td>
+                    <p>Jumlah Tiket </p>
+                </td>
+                <td><input id="jumlah" type="number" placeholder="Masukan Jumlah Tiket" required style="width: 240px;">
+                </td>
+                <td>
+                    <p id="sjumlah" style="color: red;"></p>
+                </td>
+            </tr>
+        </form>
+        <tr>
+            <td colspan="2"></td>
+            <td><button onclick="proses()">Kirim</button>
+                <button onclick="reset()">Reset</button>
+            </td>
+        </tr>
+    </table>
+    <br><br>
+    <table id="hasil">
+        <tr>
+            <th class="width">Nama Pelanggan</th>
+
+            <th class="width">Email</th>
+
+            <th class="width">Jam Keberangkatan</th>
+
+            <th class="width">Tujuan Keberangkatan</th>
+
+            <th class="width">Jumlah Tiket</th>
+        </tr>
+        <tr>
+            <td>
+                <p id="hnama" class="justify"></p>
+            </td>
+
+            <td>
+                <p id="hemail" class="justify"></p>
+            </td>
+
+            <td>
+                <p id="hjam" class="justify"></p>
+            </td>
+
+            <td>
+                <p id="htujuan" class="justify"></p>
+            </td>
+
+            <td>
+                <p id="hjumlah" class="justify"></p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function proses() {
+            if (nama.value == "") {
+                snama.innerHTML = "Data tidak valid"
+            }
+            if (email.value == "") {
+                semail.innerHTML = "Data tidak valid"
+            }
+            if (jam.value == "") {
+                sjam.innerHTML = "Data tidak valid"
+            }
+            if (tujuan.value == "") {
+                stujuan.innerHTML = "Data tidak valid"
+            }
+            if (jumlah.value == "") {
+                sjumlah.innerHTML = "Data tidak valid"
+            } else {
+                alert("Pemesanan Tiket Sukses")
+
+                let hnama = document.getElementById("hnama")
+                let hemail = document.getElementById("hemail")
+                let hjam = document.getElementById("hjam")
+                let htujuan = document.getElementById("htujuan")
+                let hjumlah = document.getElementById("hjumlah")
+
+                let hasil = document.getElementById("hasil")
+                hasil.style.visibility = "visible"
+
+                hnama.innerHTML = nama.value
+                hemail.innerHTML = email.value
+                hjam.innerHTML = jam.value
+                htujuan.innerHTML = tujuan.value
+                hjumlah.innerHTML = jumlah.value
+            }
+        }
+        function reset() {
+            nama.value = ""
+            email.value = ""
+            jam.value = ""
+            tujuan.value = ""
+            jumlah.value = ""
+        }    
+    </script>
+</body>
+</html>

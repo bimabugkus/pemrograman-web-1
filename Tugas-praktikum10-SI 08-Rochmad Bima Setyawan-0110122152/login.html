@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style1.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs.html">Nomor 2</a></li>
+                <li><a href="chat.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form-valid.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="main">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+            <label for="password">Password</label>
+            <input type="password" id="password">
+            <br>
+            <button type="button" onclick="login()">Login</button>
+        </div>
+    </div>
+
+
+    <script>
+        function login(){
+            let uname = document.getElementById("username").value
+            let pass = document.getElementById("password").value
+
+            if(uname == "ahmad2017" && pass == "integrity"){
+                alert("Login Sukses");
+                location.href = "login-sukses.html"
+            }else {
+                alert("Login Gagal");
+            }
+        }
+    </script>
+</body>
+</html>

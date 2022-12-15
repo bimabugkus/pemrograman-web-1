@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Kurs</title>
+    <link rel="stylesheet" href="css/style2.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <ul>
+                <li><a href="login.html">Nomor 1</a></li>
+                <li><a href="kurs.html">Nomor 2</a></li>
+                <li><a href="chat.html">Nomor 3</a></li>
+                <li><a href="img-picker.html">Nomor 4</a></li>
+                <li><a href="form-valid.html">Nomor 5</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <fieldset class="field-kurs">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table class="tabel-kurs" border="1">
+            <tr>
+                <th>Masukan Nilai   </th>
+                <th>Valas</th>
+                <th>Nilai Rupiah</th>
+            </tr>
+            <tr>
+                <td><input type="text" id="nilai" onchange="hitung_dolar()"></td>
+                <td><select name="uang" id="matauang" onchange="hitung_dolar()">
+                    <option value="dollar">Dollar US</option>
+                    <option value="d_Singapore">Dollar Singapore</option>
+                    <option value="ringgit">Ringgit Malaysia</option>
+                    <option value="yen_jepang">Yen Jepang</option>
+                    <option value="euro">Euro</option>
+                    <option value="riyal_arab">Riyal Arab Saudy</option>         
+                </select></td>
+                <td>
+                    <input type="text" id="hasil" readonly>
+                </td>     
+            </tr>
+        </table>
+    </fieldset>
+
+    <script>
+        function hitung_dolar(){
+    
+    if (matauang.value == "dollar"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiDollar = 9915
+        let jumlah = nilai * nilaiDollar
+        document.getElementById("hasil").value=jumlah
+
+    }else if (matauang.value == "d_Singapore"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiDollarSingapore = 13472
+        let jumlah = nilai * nilaiDollarSingapore
+        document.getElementById("hasil").value=jumlah
+
+    }else if (matauang.value == "ringgit"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiRinggit = 874
+        let jumlah = nilai * nilaiRinggit
+        document.getElementById("hasil").value=jumlah
+
+    }else if (matauang.value == "yen_jepang"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiYen = 120
+        let jumlah = nilai * nilaiYen
+        document.getElementById("hasil").value=jumlah
+
+    }else if (matauang.value == "euro"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiEuro = 15888
+        let jumlah = nilai * nilaiEuro
+        document.getElementById("hasil").value=jumlah
+
+    }
+    else if (matauang.value == "riyal_arab"){
+
+        let nilai = Number(document.getElementById("nilai").value);
+        let nilaiRiyal= 3592
+        let jumlah = nilai * nilaiRiyal
+        document.getElementById("hasil").value=jumlah
+    }
+}
+    </script>
+</body>
+</html>
